@@ -34,7 +34,7 @@ default_run_options[:pty] = true
 
 
 set :branch, "master"
-set :deploy_to, "/home/ryan/www/crm/redmine.junyfly.net/htdocs/#{application}"
+set :deploy_to, "/home/ryan/www/redmine/redmine.junyfly.net/htdocs/#{application}"
 
 
 set :keep_releases, 1
