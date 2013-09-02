@@ -3,8 +3,8 @@ require 'bundler/capistrano'
 
 set :rails_env, 'production'
 set :rvm_type, :system
-set :rvm_ruby_string, '1.9.3@rails3.2.13_redmine'
-set :rvm_path, '/home/ryan/.rvm/bin/rvm/'
+set :rvm_ruby_string, 'ruby-1.9.3-p448@rails3.2.13_redmine'
+set :rvm_path, '/home/ryan/.rvm'
 set :rvm_bin_path, "#{rvm_path}/bin"
 set :rvm_lib_path, "#{rvm_path}/lib"
 set :deploy_via, :remote_cache
@@ -17,7 +17,7 @@ set :normalize_asset_timestamps, false
 
 
 set :application, "redmine.junyfly.net"
-set :repository,  "git@github.com:TeamMemZhaoXiaoLong/xmcrm.git"
+set :repository,  "git@github.com:Ryan007/redmine.git"
 
 set :scm, :git
 
@@ -25,7 +25,7 @@ role :web, "redmine.junyfly.net"                          # Your HTTP server, Ap
 role :app, "redmine.junyfly.net"                          # This may be the same as your `Web` server
 role :db,  "redmine.junyfly.net", :primary => true # This is where Rails migrations will run
 #role :db,  "your slave db-server here"
-set :port, 22229
+# set :port, 22229
 set :use_sudo, false
 set :user, "ryan"    # 上传了ssh的public key
 set :web_user, "nobody"
@@ -50,21 +50,21 @@ end
 after "bundle:install", "symlink_database_yml"
 after "deploy:migrate", "deploy:cleanup" 
 
-namespace :deploy do
-  task :stop, :roles => :web, :except => { :no_release => true } do
-    run "cd #{current_path} && #{passenger_cmd} stop"
-    run "rm /tmp/crm.*"
-  end
+# namespace :deploy do
+#   task :stop, :roles => :web, :except => { :no_release => true } do
+#     run "cd #{current_path} && #{passenger_cmd} stop"
+#     run "rm /tmp/crm.*"
+#   end
 
-  task :start, :roles => :web, :except => { :no_release => true } do 
-    run "cd #{current_path} && #{passenger_cmd} start --socket /tmp/redmine.junyfly.net.socket -d -e production --pid-file /tmp/xmcrm.pid"
-  end
-  task :restart, :roles => :web, :except => { :no_release => true } do
-    # run "cd #{current_path} && #{passenger_cmd} stop"
-    # run "rm /tmp/crm.*"
-    # run "cd #{current_path} && #{passenger_cmd} start --socket /tmp/redmine.junyfly.net.socket -d -e production --pid-file /tmp/xmcrm.pid"
-  end
-end
+#   task :start, :roles => :web, :except => { :no_release => true } do 
+#     run "cd #{current_path} && #{passenger_cmd} start --socket /tmp/redmine.junyfly.net.socket -d -e production --pid-file /tmp/xmcrm.pid"
+#   end
+#   task :restart, :roles => :web, :except => { :no_release => true } do
+#     # run "cd #{current_path} && #{passenger_cmd} stop"
+#     # run "rm /tmp/crm.*"
+#     # run "cd #{current_path} && #{passenger_cmd} start --socket /tmp/redmine.junyfly.net.socket -d -e production --pid-file /tmp/xmcrm.pid"
+#   end
+# end
 
 
 
