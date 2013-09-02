@@ -150,7 +150,6 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-jdbc-adapter (= 1.2.5)
-  activerecord-jdbcmysql-adapter
   builder (= 3.0.0)
   capistrano
   capybara (~> 2.1.0)
