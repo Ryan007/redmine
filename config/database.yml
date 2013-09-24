@@ -8,7 +8,7 @@ production:
   database: redmine
   host: localhost
   username: redmine
-  password: "1qa2ws3ed"
+  password: redmine_pass
   encoding: utf8
 
 development:
