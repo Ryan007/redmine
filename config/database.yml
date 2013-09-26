@@ -3,13 +3,22 @@
 # Examples for PostgreSQL, SQLite3 and SQL Server can be found at the end.
 # Line indentation must be 2 spaces (no tabs).
 
+# production:
+#   adapter: mysql2
+#   database: redmine
+#   host: localhost
+#   username: redmine
+#   password: redmine_pass
+#   encoding: utf8
+
 production:
   adapter: mysql2
   database: redmine
   host: localhost
-  username: redmine
-  password: redmine_pass
+  username: ryan
+  password: ryan12345
   encoding: utf8
+
 
 development:
   adapter: mysql2
