@@ -58,17 +58,17 @@
 # This might require some additional configuration. See the guides at:
 # http://www.redmine.org/projects/redmine/wiki/EmailConfiguration
 #
-# production:
-#   email_delivery:
-#     delivery_method: :smtp
-#     smtp_settings:
-#       enable_starttls_auto: true
-#       address: "smtp.gmail.com"
-#       port: 587
-#       domain: "smtp.gmail.com" # 'your.domain.com' for GoogleApps
-#       authentication: :plain
-#       user_name: "your_email@gmail.com"
-#       password: "your_password"
+production:
+  email_delivery:
+    delivery_method: :smtp
+    smtp_settings:
+      enable_starttls_auto: true
+      address: "smtp.gmail.com"
+      port: 587
+      domain: "smtp.gmail.com" # 'your.domain.com' for GoogleApps
+      authentication: :plain
+      user_name: "17jianya@gmail.com" 
+      password: "www17jianya"
 #
 #
 # === More configuration options
@@ -78,18 +78,18 @@
 #
 # http://wiki.rubyonrails.org/rails/pages/HowToSendEmailsWithActionMailer
 
-production:
-  email_delivery:
-    delivery_method: :smtp
-    smtp_settings:
-      tls: true
-      enable_starttls_auto: true
-      address: "smtp.gmail.com" 
-      port: '587'
-      domain: "smtp.gmail.com" 
-      authentication: :plain
-      user_name: "17jianya@gmail.com" 
-      password: "www17jianya"
+# production:
+#   email_delivery:
+#     delivery_method: :smtp
+#     smtp_settings:
+#       tls: true
+#       enable_starttls_auto: true
+#       address: "smtp.gmail.com" 
+#       port: '587'
+#       domain: "smtp.gmail.com" 
+#       authentication: :plain
+#       user_name: "17jianya@gmail.com" 
+#       password: "www17jianya"
 
 # default configuration options for all environments
 # default:
@@ -111,7 +111,7 @@ production:
   # Examples:
   # attachments_storage_path: /var/redmine/files
   # attachments_storage_path: D:/redmine/files
-  attachments_storage_path:
+  attachments_storage_path: /home/ryan/www/redmine/red.17jianya.com/htdocs/red.17jianya.com/shared/attachments
 
   # Configuration of the autologin cookie.
   # autologin_cookie_name: the name of the cookie (default: autologin)
