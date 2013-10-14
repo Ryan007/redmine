@@ -30,7 +30,7 @@ RedmineApp::Application.configure do
 
   config.active_support.deprecation = :log
 
-  # config.action_mailer.default_url_options = { :host => 'red.17jianya.com' }
+  config.action_mailer.default_url_options = { :host => 'red.17jianya.com' }
   config.action_mailer.delivery_method = :smtp
 
   # ActionMailer::Base.smtp_settings = {
