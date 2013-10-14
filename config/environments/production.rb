@@ -29,4 +29,18 @@ RedmineApp::Application.configure do
   config.action_mailer.logger = nil
 
   config.active_support.deprecation = :log
+
+  config.action_mailer.default_url_options = { :host => 'red.17jianya.com' }
+  config.action_mailer.delivery_method = :smtp
+
+  ActionMailer::Base.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => "gmail.com",
+    :user_name            => "17jianya",
+    :password             => "www17jianya",
+    :authentication       => "plain",
+    :enable_starttls_auto => true
+  }
+
 end
