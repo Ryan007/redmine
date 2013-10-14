@@ -16,14 +16,14 @@ set :passenger_cmd,  "#{bundle_cmd} exec /home/ryan/.rvm/gems/ruby-1.9.3-p448@ra
 set :normalize_asset_timestamps, false
 
 
-set :application, "redmine.17jianya.net"
+set :application, "red.17jianya.com"
 set :repository,  "git@github.com:Ryan007/redmine.git"
 
 set :scm, :git
 
-role :web, "redmine.17jianya.net"                          # Your HTTP server, Apache/etc
-role :app, "redmine.17jianya.net"                          # This may be the same as your `Web` server
-role :db,  "redmine.17jianya.net", :primary => true # This is where Rails migrations will run
+role :web, "red.17jianya.com"                          # Your HTTP server, Apache/etc
+role :app, "red.17jianya.com"                          # This may be the same as your `Web` server
+role :db,  "red.17jianya.com", :primary => true # This is where Rails migrations will run
 #role :db,  "your slave db-server here"
 # set :port, 22229
 set :use_sudo, false
@@ -34,7 +34,7 @@ default_run_options[:pty] = true
 
 
 set :branch, "master"
-set :deploy_to, "/home/ryan/www/redmine/redmine.17jianya.net/htdocs/#{application}"
+set :deploy_to, "/home/ryan/www/redmine/red.17jianya.com/htdocs/#{application}"
 
 
 set :keep_releases, 1
