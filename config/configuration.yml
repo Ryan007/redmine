@@ -62,13 +62,14 @@ production:
   email_delivery:
     delivery_method: :smtp
     smtp_settings:
-      enable_starttls_auto: true
       address: "smtp.gmail.com"
       port: 587
       domain: "smtp.gmail.com" # 'your.domain.com' for GoogleApps
       authentication: :plain
       user_name: "17jianya@gmail.com" 
       password: "www17jianya"
+
+#     enable_starttls_auto: true
 #
 #
 # === More configuration options
