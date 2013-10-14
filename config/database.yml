@@ -13,11 +13,19 @@
 
 production:
   adapter: mysql2
-  database: redmine
+  database: ryan_redmine
   host: localhost
   username: ryan
   password: ryan12345
   encoding: utf8
+
+# production:
+#   adapter: mysql2
+#   database: redmine
+#   host: localhost
+#   username: ryan
+#   password: ryan12345
+#   encoding: utf8
 
 
 development:
